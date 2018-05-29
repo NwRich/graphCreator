@@ -20,6 +20,9 @@ int main () {
   bool working = true;
   char* input = new char[16];
   node* nodes[20];
+  for (int i = 0; i < 20; i++) {
+    nodes[i] = NULL;
+  }
   int adj[20][20];
   for (int i = 0; i < 20; i ++) {
     for (int j = 0 ; j < 20; j++) {
@@ -27,7 +30,7 @@ int main () {
     }
   }
   while (working == true) {
-    cout << "would you like to add, distance,delete, or quit?" << endl;
+    cout << "would you like to add, distance, delete, or quit?" << endl;
     cin.getline(input, 16);
     if (strcmp(input, "quit") == 0) {
       working = false;
@@ -97,4 +100,3 @@ void print(int adj[20][20]) {
     cout << endl;
   }
 }
-# graphCreator
