@@ -9,7 +9,6 @@ struct node {
   char* name;
   int index = -1;
   node* previous = NULL;
-  int tDistance = 99999999999999999999999999999;
 };
 
 void print(int adj[20][20]);
@@ -44,7 +43,6 @@ int main () {
 	cout << "what is the nodes name?" << endl;
 	cin.getline(name, 16);
 	addVertex(nodes, newn, name);
-	print(adj);
       }
       else {
 	cout << "what is the name of the first vertex" << endl;
